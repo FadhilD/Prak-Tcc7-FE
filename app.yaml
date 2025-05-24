@@ -3,12 +3,11 @@ service: notes-fe-fadhil
 instance_class: F1
 
 handlers:
-  - url: /
-    static_files: dist/index.html
-    upload: dist/index.html
+  - url: /static
+    static_dir: build/static
 
-  - url: /(.*)
-    static_files: dist/\1
-    upload: dist/(.*)
+  - url: /.*
+    static_files: build/index.html
+    upload: build/index.html
 
 default_expiration: "1h"
