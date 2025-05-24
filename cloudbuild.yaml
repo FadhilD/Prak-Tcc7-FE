@@ -1,12 +1,12 @@
 steps:
-  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
-    entrypoint: "bash"
-    args:
-      - "-c"
-      - |
-        export DISABLE_ESLINT_PLUGIN=true
-        npm install
-        npm run build
+  - name: "node:16"
+    entrypoint: "npm"
+    args: ["install"]
+
+  - name: "node:16"
+    entrypoint: "npm"
+    env: ["DISABLE_ESLINT_PLUGIN=true"]
+    args: ["run", "build"]
 
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     entrypoint: "gcloud"
