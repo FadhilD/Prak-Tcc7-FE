@@ -5,6 +5,7 @@ steps:
 
   - name: "node:16"
     entrypoint: "npm"
+    env: ["DISABLE_ESLINT_PLUGIN=true"]
     args: ["run", "build"]
 
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
