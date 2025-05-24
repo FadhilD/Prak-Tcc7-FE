@@ -130,7 +130,7 @@ const RegisterPage = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("https://notes-be-fadhil7-21569344527.us-central1.run.app/register", {
+      const res = await fetch('https://notes-be-fadhil7-21569344527.us-central1.run.app/register', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
