@@ -1,0 +1,17 @@
+runtime: nodejs20
+service: notes-fe-fadhil
+<<<<<<< HEAD
+instance_class: F1
+
+handlers:
+  - url: /
+    static_files: dist/index.html
+    upload: dist/index.html
+
+  - url: /(.*)
+    static_files: dist/\1
+    upload: dist/(.*)
+
+default_expiration: "1h"
+=======
+>>>>>>> 744e2b983ed63193b52a12e23d55ec1e24073d9b
